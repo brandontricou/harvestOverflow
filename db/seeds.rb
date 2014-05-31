@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
 Agency.create!([
   {
     email: 'Agency1@email.com',
@@ -17,17 +18,17 @@ Agency.create!([
     phone: '(404) 555-1234',
     contact: 'Tony Stark'
   },
-#  {
-#    email: 'Agency2@email.com',
-#    password: 'password',
-#    name: 'Agency 2',
-#    address: '8000 Peachtree Road',
-#    city: 'Atlanta',
-#    state: 'GA',
-#    zip_code: 30092,
-#    phone: '(770) 555-4646',
-#    contact: 'Betty Jo'
-#  }
+  {
+    email: 'Agency2@email.com',
+    password: 'password',
+    name: 'Agency 2',
+    address: '8000 Peachtree Road',
+    city: 'Atlanta',
+    state: 'GA',
+    zip_code: 30092,
+    phone: '(770) 555-4646',
+    contact: 'Betty Jo'
+  }
 ])
 
 agency = Agency.find_by(name: 'Test Agency')
