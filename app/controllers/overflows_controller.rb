@@ -23,6 +23,15 @@ class OverflowsController < ApplicationController
 		@overflow = Overflow.find(params[:id])
 	end
 
+	def update
+    	@overflow = Overflow.find(params[:id])
+    	if @overflow.update(overflow_params)
+      		redirect_to root_path, notice: "Overflow successfully updated!"
+    	else
+      		render :edit
+    	end
+  	end
+
 	def destroy
 		@overflow = Overflow.find(params[:id])
 		@overflow.destroy

@@ -20,6 +20,15 @@
 			      <% if overflow.perishable %>
 				      <p class="list-group-item-text">Expires <%= time_ago_in_words(overflow.expiration) %> from now</p>
 			      <% end %>
+            <h4>Pick up location</h4>
+            <p>
+              <%= @agency.find(overflow.agency_id).name %><br>
+              <%= @agency.find(overflow.agency_id).address %><br>
+              <%= @agency.find(overflow.agency_id).city %>, 
+              <%= @agency.find(overflow.agency_id).state %> 
+              <%= @agency.find(overflow.agency_id).zip_code %>
+            </p>
+            <p>Contact <%= @agency.find(overflow.agency_id).contact %> at <%= @agency.find(overflow.agency_id).phone %></p>
             <p><%= link_to "Update", edit_overflow_path(overflow) %></p>
         </a>
     </div>
