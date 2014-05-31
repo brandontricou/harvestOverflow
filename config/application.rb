@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module HarvestOverflow
   class Application < Rails::Application
+  	config.assets.initialize_on_precompile = false
     console do
       ActiveRecord::Base.connection
     end

@@ -1,5 +1,6 @@
 HarvestOverflow::Application.routes.draw do
-  resources :agencies
+  devise_for :agencies
+  #resources :agencies
   resources :overflows
 
   root "overflows#index"

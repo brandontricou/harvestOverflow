@@ -7,7 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Agency.create!([
   {
-    name: 'Test Agency',
+    email: 'Agency1@email.com',
+    password: 'password',
+    name: 'Agency 1',
     address: '123 Main Street',
     city: 'Atlanta',
     state: 'GA',
@@ -15,15 +17,17 @@ Agency.create!([
     phone: '(404) 555-1234',
     contact: 'Tony Stark'
   },
-  {
-    name: 'Test Agency 2',
-    address: '8000 Peachtree Road',
-    city: 'Atlanta',
-    state: 'GA',
-    zip_code: 30092,
-    phone: '(770) 555-4646',
-    contact: 'Betty Jo'
-  }
+#  {
+#    email: 'Agency2@email.com',
+#    password: 'password',
+#    name: 'Agency 2',
+#    address: '8000 Peachtree Road',
+#    city: 'Atlanta',
+#    state: 'GA',
+#    zip_code: 30092,
+#    phone: '(770) 555-4646',
+#    contact: 'Betty Jo'
+#  }
 ])
 
 agency = Agency.find_by(name: 'Test Agency')
