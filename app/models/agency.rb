@@ -1,3 +1,8 @@
 class Agency < ActiveRecord::Base
-	has_many :overflows
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  has_many :overflows
+
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 end
