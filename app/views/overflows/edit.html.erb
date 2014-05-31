@@ -1,0 +1,7 @@
+<header>
+  <h1>Edit or Delete Your Overflow</h1>
+</header>
+
+<p><%= link_to "Remove from Harvest Overflow", @overflow, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+<%= render 'form' %>

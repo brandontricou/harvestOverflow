@@ -15,11 +15,12 @@
 	<h3 class="text-primary">Posted <%= time_ago_in_words(overflow.created_at) %> ago</h3>
     <div class="list-group">
         <a href="#" class="list-group-item">
-            <h4 class="list-group-item-heading">Palette of Carrots</h4>
+            <h4 class="list-group-item-heading"><%= overflow.item_type %></h4>
             <p class="list-group-item-text"><%= overflow.description %></p>
-			<% if overflow.perishable %>
-				<p class="list-group-item-text">Expires <%= time_ago_in_words(overflow.expiration) %> from now</p>
-			<% end %>
+			      <% if overflow.perishable %>
+				      <p class="list-group-item-text">Expires <%= time_ago_in_words(overflow.expiration) %> from now</p>
+			      <% end %>
+            <p><%= link_to "Update", edit_overflow_path(overflow) %></p>
         </a>
     </div>
 	 <% end %>

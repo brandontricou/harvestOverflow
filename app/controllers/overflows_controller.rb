@@ -19,6 +19,16 @@ class OverflowsController < ApplicationController
     	end
 	end
 
+	def edit
+		@overflow = Overflow.find(params[:id])
+	end
+
+	def destroy
+		@overflow = Overflow.find(params[:id])
+		@overflow.destroy
+		redirect_to root_path
+	end
+
 private
 	def overflow_params
 		params.require(:overflow).permit(:item_type, :description, :perishable, :expiration)
