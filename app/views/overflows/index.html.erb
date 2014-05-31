@@ -1,15 +1,33 @@
-<h1>Justin's stuff here!</h1>
+<h1>Harvest Overflow</h1>
 
-<% @overflows.each do |overflow| %>
-	<p>
-		<%= overflow.item_type %>
-	</p>
-	<p>
-		<% if overflow.perishable == true %>
-			Items are perishable
-		<% end %>
-	</p>
-	<p>
-		<%= overflow.quantity %>
-	</p>
-<% end %>
+<ul>
+    <% @overflows.each do |overflow| %>
+        <article>
+          <header>
+            <h2>Posted <%= time_ago_in_words(overflow.created_at) %> ago</h2>
+          </header>
+          <table>
+            <tr>
+              <th>What's available?</th>
+              <td><%= overflow.description %></td>
+            </tr>
+            <% if overflow.perishable %>
+            <tr>
+              <th>When does it go bad?</th>
+              <td><%= time_ago_in_words(overflow.expiration) %> from now</td>
+            </tr>
+            <% end %>
+            <tr>
+              <th>Where is it?</th>
+              <td>
+                <%= @agency.find(overflow.agency_id).name %><br>
+                <%= @agency.find(overflow.agency_id).address %><br>              
+                <%= @agency.find(overflow.agency_id).city %>, 
+                <%= @agency.find(overflow.agency_id).state %>
+                <%= @agency.find(overflow.agency_id).zip_code %>
+              </td>
+            </tr>
+          </table>
+        </article>
+    <% end %>
+</ul>

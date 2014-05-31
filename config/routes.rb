@@ -1,7 +1,6 @@
 HarvestOverflow::Application.routes.draw do
-  resources :overflows
-
   resources :agencies
+  resources :overflows
 
   root "overflows#index"
 end

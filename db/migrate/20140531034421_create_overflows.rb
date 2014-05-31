@@ -4,7 +4,7 @@ class CreateOverflows < ActiveRecord::Migration
       t.string :item_type
       t.boolean :perishable
       t.string :quantity
-      t.datetime :expiration
+      t.date :expiration
       t.text :description
       t.references :agency, index: true
 
