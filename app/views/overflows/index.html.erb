@@ -18,7 +18,7 @@
             <h4 class="list-group-item-heading">Palette of Carrots</h4>
             <p class="list-group-item-text"><%= overflow.description %></p>
 			<% if overflow.perishable %>
-				<p class="list-group-item-text"><%= time_ago_in_words(overflow.expiration) %> from now</p>
+				<p class="list-group-item-text">Expires <%= time_ago_in_words(overflow.expiration) %> from now</p>
 			<% end %>
         </a>
     </div>
