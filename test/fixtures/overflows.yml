@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  perishable: false
+  quantity: MyString
+  expiration: 2014-05-30 23:44:21
+  description: MyText
+  agency_id: 
+
+two:
+  type: 
+  perishable: false
+  quantity: MyString
+  expiration: 2014-05-30 23:44:21
+  description: MyText
+  agency_id: 

@@ -1,0 +1,15 @@
+<h1>Justin's stuff here!</h1>
+
+<% @overflows.each do |overflow| %>
+	<p>
+		<%= overflow.item_type %>
+	</p>
+	<p>
+		<% if overflow.perishable == true %>
+			Items are perishable
+		<% end %>
+	</p>
+	<p>
+		<%= overflow.quantity %>
+	</p>
+<% end %>
